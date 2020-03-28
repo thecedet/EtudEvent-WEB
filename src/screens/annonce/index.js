@@ -17,7 +17,30 @@ class Login extends Component {
 
   render() {
     return (
-        <p onClick={this.logout}>Deconnexion</p>
+      <div>
+        <nav>
+          <div className="nohover">
+            <div className="image"></div>
+          </div>
+          <div>Annonces</div>
+          <div>Forum</div>
+          <div>Liens utiles</div>
+          <div>Contact</div>
+
+          <div className="right nohover">
+            <div className="post" onClick={this.logout}>Poster une annonce</div>
+            <div>
+              <div className="image"></div>
+            </div>
+          </div>
+
+        </nav>
+        <nav>
+          <div className="active">Annonces officielles</div>
+          <div>Annonces &eacute;tudiantes</div>
+          <div>Favoris</div>
+        </nav>
+      </div>
     )
   }
 }

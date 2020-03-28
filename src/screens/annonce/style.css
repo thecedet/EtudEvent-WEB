@@ -1,0 +1,86 @@
+nav, nav > .right {
+  background-color: #6A1A68;
+  flex-direction: row;
+  display: flex;
+}
+
+nav .image {
+  width: 50px;
+  height: 50px;
+  background-image: url("https://cdn.discordapp.com/attachments/626418122294951947/693459906866577448/logo_2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+nav div, nav input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+nav:nth-child(1) > div:hover:not(.nohover) {
+  background-color: violet;
+  transition: .3s;
+}
+
+nav > .right {
+  margin-left: auto;
+}
+
+nav > .right .image {
+  background-image: url("https://cdn.discordapp.com/attachments/626418122294951947/693459906866577448/logo_2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 25px;
+}
+
+nav > .right > * {
+  margin: 10px;
+}
+
+nav .post {
+  background: violet;
+  border-radius: .5em;
+}
+nav .post:hover {
+  background: darkorchid;
+}
+nav .post:active {
+  transform: translateY(1px);
+}
+
+::selection {
+    color: none;
+    background: none;
+}
+
+::-moz-selection {
+    color: none;
+    background: none;
+}
+
+nav:nth-child(2) {
+  padding-left: 2em;
+  background-color: transparent;
+  box-shadow: 0 10px 10px 0px rgba(0,0,0,0.2), 0 0px 10px 0 rgba(0,0,0,0.19);
+}
+
+nav:nth-child(2) > div:hover {
+  color: blue
+}
+
+nav:nth-child(2) > div {
+  color: black;
+  padding: 1em;
+}
+
+nav > .active {
+  border-bottom: 3px solid #6A1A68;
+  color: #6A1A68 !important;
+}

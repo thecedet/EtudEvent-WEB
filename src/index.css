@@ -1,3 +1,12 @@
 body {
     margin:0
 }
+
+* {
+  font-family: Helvetica;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url("https://cdn.discordapp.com/attachments/626418122294951947/693475960598691880/Helvetica-Neue-LT-Std-65-Medium.ttf");
+}
