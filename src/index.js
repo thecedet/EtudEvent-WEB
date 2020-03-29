@@ -6,14 +6,16 @@ import "./index.css"
 
 import Login from './screens/auth/login';
 import Register from './screens/auth/register';
-import Annonce from "./screens/annonce/"
+import AnnonceMain from "./screens/annonce/"
+import Annonce from "./screens/annonce/annonce"
 
 render(
   <Router>
     <div>
-      <Route exact path="/" component={Annonce} />
+      <Route exact path="/" component={AnnonceMain} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
+      <Route exact path="/annonce/:uid" component={Annonce} />
     </div>
   </Router>,
   document.getElementById('root')
