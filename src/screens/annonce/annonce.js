@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Auth,{withAuth} from '../../components/Auth'
+import Auth from '../../components/Auth'
 
 
 class Annonce extends Component {
@@ -32,4 +32,4 @@ class Annonce extends Component {
     )
   }
 }
-export default withAuth(Annonce)
+export default Auth(Annonce)

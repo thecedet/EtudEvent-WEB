@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './style.css';
 
-import Auth,{withAuth} from '../../components/Auth'
+import Auth,{AuthLogout} from '../../components/Auth'
 
 function Annonce(props) {
   const days = ["Lundi","Mardi","Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
   const month = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
   const date = new Date(props.data.date)
-  console.log(props)
+
   return (
     <div
       onClick={() => props.history.push("/annonce/"+props.data.uid)}
@@ -29,12 +29,12 @@ class AnnonceMain extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getAnnonce()
   }
 
   logout() {
-    Auth.logout()
+    AuthLogout()
     this.props.history.replace("/login")
   }
 
@@ -47,7 +47,6 @@ class AnnonceMain extends Component {
       }
     })
     const response = await request.json()
-    console.log(response)
     this.setState({annonces: this.state.annonces.concat(response.annonce)})
   }
 
@@ -91,4 +90,4 @@ class AnnonceMain extends Component {
 }
 
 
-export default withAuth(AnnonceMain)
+export default Auth(AnnonceMain)

@@ -1,42 +1,3 @@
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
-  ::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #6A1A68;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-  }
-
-  ::-webkit-scrollbar-thumb:active {
-    background: #000000;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-  }
-  ::-webkit-scrollbar-track:active {
-    background: #333333;
-  }
-  ::-webkit-scrollbar-corner {
-    background: transparent;
-  }
-
-body {
-  margin: 0;
-  background-color: #f5f8f9;
-  overflow: hidden;
-}
-
-* {
-  font-family: 'Helvetica';
-}
-
 nav, nav > .right {
   background-color: #6A1A68;
   flex-direction: row;
@@ -101,16 +62,6 @@ nav .post:active {
   transform: translateY(1px);
 }
 
-::selection {
-    color: none;
-    background: none;
-}
-
-::-moz-selection {
-    color: none;
-    background: none;
-}
-
 
 nav:nth-child(2) {
   padding-left: 2em;
@@ -152,6 +103,7 @@ nav:nth-child(2) > .active {
 }
 
 .annonce {
+  background: #6A1A68;
   display: flex;
   flex-direction: column;
   border-radius: 1em;
