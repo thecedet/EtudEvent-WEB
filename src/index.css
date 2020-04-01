@@ -5,12 +5,12 @@ body {
 }
 
 * {
-  font-family: Helvetica;
+  font-family: 'Helvetica Neue LT Std';
 }
 
 @font-face {
-  font-family: Helvetica;
-  src: url("https://cdn.discordapp.com/attachments/626418122294951947/693475960598691880/Helvetica-Neue-LT-Std-65-Medium.ttf");
+  font-family: "Helvetica Neue LT Std";
+  src: url("https://cdn.discordapp.com/attachments/626418122294951947/693475960598691880/Helvetica-Neue-LT-Std-65-Medium.ttf") format("truetype");
 }
 
 ::-webkit-scrollbar {
