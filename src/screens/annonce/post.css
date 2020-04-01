@@ -1,0 +1,102 @@
+
+.postContainer > div > .box > section {
+  padding-top: 1em;
+  border-top: 1px solid gray;
+  border-radius: 0;
+}
+
+
+.postContainer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  overflow: auto;
+}
+
+.postContainer > div {
+  width: 50%;
+  margin: 2em;
+  padding-bottom: 4em;
+}
+
+.postContainer > div > h1 {
+  margin-bottom: 2em;
+}
+
+.postContainer > div > .box:not(.render) {
+  display: flex;
+}
+
+.postContainer > div > .box {
+  width: 100%;
+  min-height: 300px;
+  border-radius: .7em;
+  padding-bottom: 2em;
+  flex-direction: column;
+  margin-bottom: 2em;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,.2), 0 0 10px 0 rgba(0,0,0,.19);
+}
+.postContainer > div > .box:not(.render) > *{
+  margin: 1em;
+  color: gray;
+  border-radius: .3em;
+}
+
+.postContainer > div > .box > .widgetContainer > h2:only-child {
+  display: none;
+}
+
+.postContainer > div > .box > h2,label{
+  text-transform: uppercase;
+}
+
+.postContainer > div > .box > label,section{
+  text-align: start;
+  margin: 0;
+  margin-left: 1em;
+  font-weight: bold;
+}
+
+.postContainer > div > .box > input, .render{
+  text-align: start;
+  margin-top: .1em;
+  width: auto;
+  color: black;
+  border-style: none;
+  border: 1.1px solid gray;
+}
+
+.postContainer > div > .box > input:hover{
+  border-color: #6A1A68;
+}
+
+.postContainer > div > .box > #editor {
+  background: white;
+  min-height: inherit;
+  text-align: start;
+  padding: .3em;
+  margin-bottom: 0;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: .1em;
+  border-style: none;
+  border: 1.1px solid gray;
+  color: black;
+}
+
+.postContainer > div > .box > #editor:hover{
+  border-color: #6A1A68;
+}
+
+.postContainer > div > .box > fieldset {
+  border: none;
+  border-radius: 0;
+  margin-top: 0;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+}
+
+.postContainer > div > .box > fieldset,#editor {
+  border: 1px solid gray;
+}

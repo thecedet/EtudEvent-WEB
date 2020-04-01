@@ -1,5 +1,6 @@
 body {
   margin:0;
+  background-color: #f5f8f9;
   overflow: hidden
 }
 
@@ -12,41 +13,50 @@ body {
   src: url("https://cdn.discordapp.com/attachments/626418122294951947/693475960598691880/Helvetica-Neue-LT-Std-65-Medium.ttf");
 }
 
-  ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
-  }
-  ::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #6A1A68;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-  }
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6A1A68;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
 
-  ::-webkit-scrollbar-thumb:active {
-    background: #000000;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-  }
-  ::-webkit-scrollbar-track:active {
-    background: #333333;
-  }
-  ::-webkit-scrollbar-corner {
-    background: transparent;
-  }
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 
-  ::selection {
-    color: none;
-    background: none;
+.scrollContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+::selection {
+  color: none;
+  background: none;
 }
 
 ::-moz-selection {
     color: none;
     background: none;
-}
+}*/

@@ -8,7 +8,7 @@ import Login from './screens/auth/login';
 import Register from './screens/auth/register';
 import AnnonceMain from "./screens/annonce/"
 import Annonce from "./screens/annonce/annonce"
-
+import AnnoncePost from "./screens/annonce/post"
 import NotFound from "./screens/NotFound"
 
 render(
@@ -17,6 +17,7 @@ render(
       <Route exact path="/" component={AnnonceMain} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
+      <Route exact path="/annonce/post" component={AnnoncePost} />
       <Route exact path="/annonce/:uid" component={Annonce} />
       <Route component={NotFound}/>
     </Switch>

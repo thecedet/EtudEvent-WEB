@@ -1,0 +1,32 @@
+.clock {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+}
+
+.clock > div {
+  font-size: 2em;
+  margin: 0;
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+}
+
+.clock > p {
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 50%;
+  text-transform: uppercase;
+}
+
+.clock > .svg {
+  stroke: #6A1A68;
+  position: absolute;
+  transform-origin: center;
+}
+
+.clockContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1em;
+}

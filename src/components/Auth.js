@@ -123,13 +123,13 @@ function getProfile() {
 }
 
 
-export default function Auth(AuthComponent) {
+export default function Auth(AuthComponent, permission) {
 
   return class AuthWrapped extends Component {
     constructor() {
       super()
       this.state = {
-        user: null
+        ok: null
       }
     }
 
@@ -137,18 +137,18 @@ export default function Auth(AuthComponent) {
       if (!isLogin()) {
         this.props.history.replace('/login')
       }else {
-        try {
-          const user = getProfile()
-          this.setState({user})
-        }catch(err){
-          AuthLogout()
-          this.props.history.replace('/login')
-        }
+
+        if(permission) {
+          if(getProfile().data.permissions.includes(permission)) {
+            this.setState({ok: true})
+          }
+        }else this.setState({ok: true})
+
       }
     }
 
     render() {
-      if(this.state.user) {
+      if(this.state.ok) {
         return (
           <AuthComponent {...this.props} user={this.state.user} />
         )
