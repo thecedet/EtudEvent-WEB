@@ -19,7 +19,7 @@ class Post extends Component {
   render() {
     return(
       <div className="scrollContainer">
-        <Nav />
+        <Nav history={this.props.history}/>
         <div className="postContainer">
           <div className="edit">
             <h1>Poster une annonce</h1>
