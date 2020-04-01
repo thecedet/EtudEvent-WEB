@@ -49,7 +49,7 @@ class AnnonceMain extends Component {
     return (
       <div>
         
-        <Nav history={this.props.history}/>
+        <Nav post={true} history={this.props.history}/>
 
         <div className="acontainer">
           <div className="main">
