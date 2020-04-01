@@ -150,7 +150,7 @@ export default function Auth(AuthComponent, permission) {
     render() {
       if(this.state.ok) {
         return (
-          <AuthComponent {...this.props} user={this.state.user} />
+          <AuthComponent {...this.props} />
         )
       }else return null
     }

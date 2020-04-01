@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 
-import Auth,{AuthLogout} from '../../components/Auth'
+import Auth from '../../components/Auth'
 import Nav from "../../components/nav"
 
 function Annonce(props) {
@@ -24,7 +24,6 @@ function Annonce(props) {
 class AnnonceMain extends Component {
   constructor(){
 	  super()
-    this.logout = this.logout.bind(this)
     this.state = {
       annonces: []
     }
@@ -32,11 +31,6 @@ class AnnonceMain extends Component {
 
   componentWillMount() {
     this.getAnnonce()
-  }
-
-  logout() {
-    AuthLogout()
-    this.props.history.replace("/login")
   }
 
   async getAnnonce(show=10, page=0) {
@@ -55,7 +49,7 @@ class AnnonceMain extends Component {
     return (
       <div>
         
-        <Nav logout={this.logout} post={() => this.props.history.push("/annonce/post")}/>
+        <Nav history={this.props.history}/>
 
         <div className="acontainer">
           <div className="main">
