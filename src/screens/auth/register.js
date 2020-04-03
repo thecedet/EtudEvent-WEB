@@ -98,7 +98,7 @@ export default class Register extends Component {
 					<div className="passwordforget"><p>Mot de passe oublié ?</p></div>
 							
 					<div className="boutonContainer">
-						<button className="connexion" onClick={this.submit}>Connexion</button>
+						<button className="connexion" onClick={this.submit}>Inscription</button>
 					</div>
 
 					<div className="signup" onClick={() => this.props.history.replace("/login")}><p>Connexion</p></div>
