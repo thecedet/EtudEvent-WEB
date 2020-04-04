@@ -83,6 +83,7 @@ select:after {
     font-family: 'Helvetica Neue LT Std';
     font-weight: 65;
     margin-top: -2em;
+    cursor: pointer;
 }
 
 .boutonContainer {
