@@ -11,10 +11,12 @@ class Login extends Component {
 			email: ""
 		}
 		this.submit = this.submit.bind(this)
+    		this.pressEnter = this.pressEnter.bind(this)
   }
 
   componentWillMount() {
     if(isLogin()) this.props.history.replace("/")
+    document.addEventListener('keypress', this.pressEnter);
   }
 
   submit() {
@@ -29,6 +31,13 @@ class Login extends Component {
       if(error) this.setState(error)
     })
   }
+	
+  pressEnter(event) {
+          let code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
+          if (code===13) { 
+              this.submit();
+         }
+      }
 
   render() {
     return (
