@@ -14,10 +14,12 @@ export default class Register extends Component {
       department: "R&T"
 		}
 		this.submit = this.submit.bind(this)
+    		this.pressEnter = this.pressEnter.bind(this)
   }
 
   componentWillMount() {
     if(isLogin()) this.props.history.replace("/")
+    document.addEventListener('keypress', this.pressEnter);
   }
 
   submit() {
@@ -40,6 +42,13 @@ export default class Register extends Component {
       if(error) this.setState(error)
     })
   }
+	
+  pressEnter(event) {
+          let code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
+          if (code===13) { 
+              this.submit();
+         }
+      }
 
   render() {
   	return(
@@ -90,15 +99,13 @@ export default class Register extends Component {
 						<option value="GB">Génie biologique</option>
 						<option value="GCGP">Génie chimique - Génie des procédés</option>
 						<option value="GCCD">Génie civil - Construction durable</option>
-						<option value="GEII">Génie électrique et inhtmlFormatique industrielle</option>
+						<option value="GEII">Génie électrique et inFormatique industrielle</option>
 						<option value="GMP">Génie mécanique et productique</option>
 						<option value="QLIO">Qualité, logistique industrielle et organisation</option>
 					</select>
 							
-					<div className="passwordforget"><p>Mot de passe oublié ?</p></div>
-							
 					<div className="boutonContainer">
-						<button className="connexion" onClick={this.submit}>Connexion</button>
+						<button className="connexion" onClick={this.submit}>Inscription</button>
 					</div>
 
 					<div className="signup" onClick={() => this.props.history.replace("/login")}><p>Connexion</p></div>
