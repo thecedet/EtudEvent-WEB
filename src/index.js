@@ -10,6 +10,7 @@ import AnnonceMain from "./screens/annonce/"
 import Annonce from "./screens/annonce/annonce"
 import AnnoncePost from "./screens/annonce/post"
 import NotFound from "./screens/NotFound"
+import Dashboard from "./screens/dashboard"
 
 render(
   <Router>
@@ -19,6 +20,7 @@ render(
       <Route exact path="/register" component={Register} />
       <Route exact path="/annonce/post" component={AnnoncePost} />
       <Route exact path="/annonce/:uid" component={Annonce} />
+      <Route exact path="/dashboard" component={Dashboard}/>
       <Route component={NotFound}/>
     </Switch>
   </Router>,

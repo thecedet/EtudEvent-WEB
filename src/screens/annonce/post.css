@@ -50,7 +50,7 @@
   text-transform: uppercase;
 }
 
-.postContainer > div > .box > label,section{
+.postContainer > div > .box > label, .postContainer > div > .box > section{
   text-align: start;
   margin: 0;
   margin-left: 1em;

@@ -14,7 +14,7 @@ export default class Register extends Component {
       department: "R&T"
 		}
 		this.submit = this.submit.bind(this)
-    		this.pressEnter = this.pressEnter.bind(this)
+    this.pressEnter = this.pressEnter.bind(this)
   }
 
   componentWillMount() {
@@ -44,11 +44,9 @@ export default class Register extends Component {
   }
 	
   pressEnter(event) {
-          let code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
-          if (code===13) { 
-              this.submit();
-         }
-      }
+    let code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
+    if (code===13) this.submit();
+  }
 
   render() {
   	return(
